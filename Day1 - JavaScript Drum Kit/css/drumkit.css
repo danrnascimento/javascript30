@@ -27,7 +27,9 @@ body,html {
 	width:100px;
 	text-align: center;
 	color:white;
-	background:url(http://i.imgur.com/rEWZzhjb.jpg) center;
+	background:url(http://i.imgur.com/djH083c.jpg) center;
+	-webkit-background-size: cover;
+	background-size: cover;
 	text-shadow:0 0 5px black;
 	box-shadow: 0 0 10px #F500FF;
 }
@@ -35,6 +37,8 @@ body,html {
 .playing {
 	transform:scale(1);
 	background:url(http://i.imgur.com/TOeoS.gif) center;
+	-webkit-background-size: cover;
+	background-size: cover;
 	border-color:#F500FF;
 	box-shadow: 0 0 10px #F500FF;
 	text-shadow:0 0 5px #F500FF;

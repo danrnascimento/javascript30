@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/css-var-and-js.css">
+</head>
+<body>
+	<h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+
+	<div class="controls">
+		<label for="spacing">Spacing:</label>
+		<input type="range" name="spacing" min="10" max="200" value="10" data-suffix="px">
+
+		<label for="blur">Blur:</label>
+		<input type="range" name="blur" min="0" max="25" value="10" data-suffix="px">
+
+		<br>
+
+		<label for="base">Base Color</label>
+		<input type="color" name="base" value="#BADA55">
+
+		<label for="blur">Opacity:</label>
+		<input type="range" name="opacity" min="0" max="1" value="1" step="0.1">
+	</div>
+
+	<img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+	<script src="js/css-var-and-js.js"></script>
+</body>
+</html>

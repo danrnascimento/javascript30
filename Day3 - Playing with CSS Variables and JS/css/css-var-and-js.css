@@ -1,31 +1,69 @@
 :root {
-	--base:  #BADA55;
+	--base:  #FF0080;
 	--spacing: 10px;
 	--blur: 10px;
 	--opacity: 1;
+	--grayscale: 0;
 }
-body {
-	text-align: center;
+
+html {
+	background: url(https://media.giphy.com/media/XCLuJxND16CvC/giphy.gif) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
 }
+
 body {
-	background: #193549;
 	color: white;
 	font-family: 'helvetica neue', sans-serif;
 	font-weight: 100;
 	font-size: 50px;
+	text-align: center;
 }
 .controls {
-	margin-bottom: 50px;
+	border:  5px solid #000;
+	background: rgba(0, 0, 0, 0.7);
+	float: left;
+	text-align: left;
+	margin-left: 100px;
+	padding: 50px;
 }
 input {
 	width:100px;
 }
 
-img {
-	padding: var(--spacing);
+.img-area{
+	position: relative;
+	float: right;
+	right: 100px;
+	width: 450px;
+	height: 450px;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.img-editable {
+
+	padding:0 var(--spacing);
 	background: var(--base);
-	filter: blur(var(--blur));
+	filter: blur(var(--blur)) grayscale(var(--grayscale));
 	opacity: var(--opacity);
+	width: 450px;
+	height: 450px;
+}
+
+.img-secret {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 350px;
+	height: 350px;
+	padding: 60px;
 }
 
 .hl {

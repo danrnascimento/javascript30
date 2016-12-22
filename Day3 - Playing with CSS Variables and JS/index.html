@@ -6,25 +6,32 @@
 	<link rel="stylesheet" href="css/css-var-and-js.css">
 </head>
 <body>
-	<h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+	
+	<h2>Mexe <span class='hl'>Ai!</span></h2>
 
 	<div class="controls">
 		<label for="spacing">Spacing:</label>
-		<input type="range" name="spacing" min="10" max="200" value="10" data-suffix="px">
-
-		<label for="blur">Blur:</label>
-		<input type="range" name="blur" min="0" max="25" value="10" data-suffix="px">
-
+		<input type="range" name="spacing" min="10" max="50" value="10" data-suffix="px">
 		<br>
-
+		<label for="blur">Blur:</label>
+		<input type="range" name="blur" min="0" max="10" value="10" data-suffix="px">
+		<br>
 		<label for="base">Base Color</label>
-		<input type="color" name="base" value="#BADA55">
-
-		<label for="blur">Opacity:</label>
+		<input type="color" name="base" value="#FF0080">
+		<br>
+		<label for="opacity">Opacity:</label>
 		<input type="range" name="opacity" min="0" max="1" value="1" step="0.1">
+		<br>
+		<label for="grayscale">Gray Scale:</label>
+		<input type="range" name="grayscale" min="0" max="100" value="0" data-suffix="%">
 	</div>
 
-	<img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+	<div class="img-area">
+		<img src="https://68.media.tumblr.com/27ceb615f3a25fb53c477743d4e7fee1/tumblr_od94fiS2t01u6n38po1_250.gif" class="img-editable">
+		<img src="https://a.disquscdn.com/get?url=https%3A%2F%2Flh3.googleusercontent.com%2F-Qrl2Sn7Wrz4%2FVVoF8reLuBI%2FAAAAAAAANaA%2F956h_ZTqb_8%2Fs0%2FqNtMBSx.gif&key=Vu0_xyoF0XXYVeXc9QBYUQ&w=600&h=197" class="img-secret">
+	</div>	
+
+
 	<script src="js/css-var-and-js.js"></script>
 </body>
 </html>

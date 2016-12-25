@@ -1,7 +1,7 @@
 :root {
 	--base:  #FF0080;
 	--spacing: 10px;
-	--blur: 10px;
+	--blur: 0;
 	--opacity: 1;
 	--grayscale: 0;
 }
@@ -38,7 +38,6 @@ input {
 	float: right;
 	right: 100px;
 	width: 450px;
-	height: 450px;
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: flex;
@@ -61,8 +60,8 @@ input {
 	-webkit-filter: blur(var(--blur)) grayscale(var(--grayscale));
 	filter: blur(var(--blur)) grayscale(var(--grayscale));
 	opacity: var(--opacity);
-	width: 450px;
-	height: 450px;
+	width: auto;
+	height: 400px;
 }
 
 .img-secret {
@@ -72,7 +71,7 @@ input {
 	z-index: -1;
 	width: 350px;
 	height: 350px;
-	padding: 60px;
+	padding: 25px 0 0 50px;
 }
 
 .hl {

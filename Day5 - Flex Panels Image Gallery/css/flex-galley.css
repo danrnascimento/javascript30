@@ -25,7 +25,7 @@ body {
 	justify-content: center;
 	flex: 1;
 	flex-direction: column;
-	background:#6B0F9C;
+	background:url(https://media.giphy.com/media/ytwDCq9aT3cgEyyYVO/giphy.gif);
 	color:white;
 	text-align: center;
 	align-items:center;
@@ -38,13 +38,16 @@ body {
 	font-size: 20px;
 	background-size:cover;
 	background-position:center;
+
 }
 
-.panel1 { background-image:url(http://digital-photography-school.com/wp-content/uploads/flickr/5171453436_2b2604aed5_o.jpg); }
-.panel2 { background-image:url(https://newevolutiondesigns.com/images/freebies/urban-landscape-wallpaper-15.jpg); }
-.panel3 { background-image:url(https://i.ytimg.com/vi/japZUai8jAk/maxresdefault.jpg); }
-.panel4 { background-image:url(https://wallpaperscraft.com/image/minimalism_sky_clouds_sun_mountains_lake_landscape_95458_3840x2160.jpg); }
-.panel5 { background-image:url(http://www.wallpaperbetter.com/wallpaper/421/867/725/nature-mist-landscape-sun-rays-villages-sunrise-forest-road-field-1080P-wallpaper.jpg); }
+.panel1.open { background-image:url(https://media.giphy.com/media/3EAKxecIz4Diqw2e8E/giphy.gif); }
+.panel2.open { background-image:url(https://media.giphy.com/media/xT0BKxnpSJmgU3KtAk/giphy.gif); }
+.panel3.open { background-image:url(https://media.giphy.com/media/3o6gbbbGbpBZCRm15C/giphy.gif); }
+.panel4.open { background-image:url(https://media.giphy.com/media/ytwDCEnRnhBvW2xK92/giphy.gif); }
+.panel5.open { background-image:url(https://media.giphy.com/media/3EAKxfLyMrjSBtRn4A/giphy.gif); }
+.panel6.open { background-image:url(https://media.giphy.com/media/3o6gaYRoSvXRd39X8s/giphy.gif); }
+
 
 /* FLex Items */
 .panel > * {
@@ -70,7 +73,7 @@ body {
 .panel p {
 	text-transform: uppercase;
 	text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-	font-size: 10em;
+	font-size: 5em;
 }
 
 .panel p:nth-child(2) {

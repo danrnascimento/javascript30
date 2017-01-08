@@ -7,11 +7,12 @@
 }
 
 html {
-	background: url(https://media.giphy.com/media/XCLuJxND16CvC/giphy.gif) no-repeat;
+
 	background-size: cover;
 	background-attachment: fixed;
 	height: 100%;
 	width: 100%;
+
 }
 
 h2 {
@@ -24,26 +25,31 @@ body {
 	font-weight: 100;
 	font-size: 50px;
 	text-align: center;
+	margin: 0;
+	padding: 0;
 }
+
 .controls {
 	border:  5px solid #000;
 	background: rgba(0, 0, 0, 0.7);
-	float: left;
 	text-align: left;
-	margin-left: 100px;
 	padding: 50px;
 	box-shadow: 0 0 10px #000;
+	margin: 0 auto;
+	width: 60vw;
 }
 
 input {
 	width:100px;
 }
 
-.img-area{
-	position: relative;
-	float: right;
-	right: 100px;
-	width: 450px;
+.img-bg{
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: flex;
@@ -56,7 +62,6 @@ input {
 	-ms-flex-pack: center;
 	-webkit-box-pack: center;
 	justify-content: center;
-	margin: 0 auto;
 }
 
 .img-editable {
@@ -66,9 +71,8 @@ input {
 	-webkit-filter: blur(var(--blur)) grayscale(var(--grayscale));
 	filter: blur(var(--blur)) grayscale(var(--grayscale));
 	opacity: var(--opacity);
-	width: auto;
-	height: 400px;
-	box-shadow: 0 0 10px #000;
+	width: 100%;
+	height: 100%;
 }
 
 .img-secret {

@@ -25,7 +25,7 @@ body {
 	justify-content: center;
 	flex: 1;
 	flex-direction: column;
-	background:url(https://media.giphy.com/media/ytwDCq9aT3cgEyyYVO/giphy.gif);
+	background:url(../img/gif0.gif);
 	color:white;
 	text-align: center;
 	align-items:center;
@@ -41,12 +41,12 @@ body {
 
 }
 
-.panel1.open { background-image:url(https://media.giphy.com/media/3EAKxecIz4Diqw2e8E/giphy.gif); }
-.panel2.open { background-image:url(https://media.giphy.com/media/xT0BKxnpSJmgU3KtAk/giphy.gif); }
-.panel3.open { background-image:url(https://media.giphy.com/media/3o6gbbbGbpBZCRm15C/giphy.gif); }
-.panel4.open { background-image:url(https://media.giphy.com/media/ytwDCEnRnhBvW2xK92/giphy.gif); }
-.panel5.open { background-image:url(https://media.giphy.com/media/3EAKxfLyMrjSBtRn4A/giphy.gif); }
-.panel6.open { background-image:url(https://media.giphy.com/media/3o6gaYRoSvXRd39X8s/giphy.gif); }
+.panel1.open { background-image:url(../img/gif1.gif); }
+.panel2.open { background-image:url(../img/gif2.gif); }
+.panel3.open { background-image:url(../img/gif3.gif); }
+.panel4.open { background-image:url(../img/gif4.gif); }
+.panel5.open { background-image:url(../img/gif5.gif); }
+.panel6.open { background-image:url(../img/gif6.gif); }
 
 
 /* FLex Items */

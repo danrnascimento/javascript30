@@ -1,5 +1,8 @@
 html {
-	background: url(http://i.imgur.com/jymXfQc.png) center;
+	background: -moz-linear-gradient(45deg, #4be58b 0%, #46f2ec 31%, #46f2ec 57%, #46f2ec 57%, #ed49fc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #4be58b 0%,#46f2ec 31%,#46f2ec 57%,#46f2ec 57%,#ed49fc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #4be58b 0%,#46f2ec 31%,#46f2ec 57%,#46f2ec 57%,#ed49fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4be58b', endColorstr='#ed49fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	-webkit-background-size: cover;
 	background-size: cover;
 	font-family: 'Helvetica';

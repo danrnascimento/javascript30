@@ -11,3 +11,4 @@
 * [Day 5 - Flex Panels Image Gallery](https://danrnascimento.github.io/javascript30/Day5%20-%20Flex%20Panels%20Image%20Gallery/)
 * [Day 6 - Ajax Type Ahead](https://danrnascimento.github.io/javascript30/Day6%20-%20Ajax%20Type%20Ahead)
 * [Day 7 - Array Cardio Day 2](https://danrnascimento.github.io/javascript30/Day7%20-%20Array%20Cardio%20Day%202/)
+* [Day 8 - Fun with HTML5 Canvas](https://danrnascimento.github.io/javascript30/Day8%20-%20Fun%20with%20HTML5%20Canvas/)

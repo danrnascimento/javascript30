@@ -13,4 +13,4 @@
 * [Day 7 - Array Cardio Day 2](https://danrnascimento.github.io/javascript30/Day7%20-%20Array%20Cardio%20Day%202/)
 * [Day 8 - Fun with HTML5 Canvas](https://danrnascimento.github.io/javascript30/Day8%20-%20Fun%20with%20HTML5%20Canvas/)
 * [Day 9 - Dev Tools Domination](https://danrnascimento.github.io/javascript30/Day9%20-%20Dev%20Tools%20Domination/)
-*[Day 10 - Hold Shift to Check Multiple Checkboxes](https://danrnascimento.github.io/javascript30/Day10%20-%20Hold%20Shift%20to%20Check%20Multiple%20Checkboxes/)
+* [Day 10 - Hold Shift to Check Multiple Checkboxes](https://danrnascimento.github.io/javascript30/Day10%20-%20Hold%20Shift%20to%20Check%20Multiple%20Checkboxes/)

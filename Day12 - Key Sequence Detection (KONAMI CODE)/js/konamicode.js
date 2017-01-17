@@ -6,4 +6,4 @@ window.addEventListener('keyup', function (e) {
 	if(pressed.join('').includes(secretCode)){
 		cornify_add();
 	} 
-})
+});

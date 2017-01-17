@@ -15,3 +15,4 @@
 * [Day 9 - Dev Tools Domination](https://danrnascimento.github.io/javascript30/Day09%20-%20Dev%20Tools%20Domination/)
 * [Day 10 - Hold Shift to Check Multiple Checkboxes](https://danrnascimento.github.io/javascript30/Day10%20-%20Hold%20Shift%20to%20Check%20Multiple%20Checkboxes/)
 * [Day 11 - Custom HTML5 Video Player](https://danrnascimento.github.io/javascript30/Day11%20-%20Custom%20HTML5%20Video%20Player)
+* [Day 12 - Key Sequence Detection (KONAMI CODE)](https://danrnascimento.github.io/javascript30/Day12%20-%20Key%20Sequence%20Detection%20(KONAMI CODE))

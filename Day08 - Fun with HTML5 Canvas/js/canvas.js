@@ -17,7 +17,7 @@ let direction = true;
 
 function draw (e) {
 	
-	//if(!isDrawing) return false;
+	if(!isDrawing) return false;
 
 	ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
 	ctx.beginPath();

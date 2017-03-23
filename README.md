@@ -12,4 +12,5 @@
 * [Day 8 - Fun with HTML5 Canvas](https://danrnascimento.github.io/javascript30/Day08%20-%20Fun%20with%20HTML5%20Canvas/)	
 * [Day 10 - Hold Shift to Check Multiple Checkboxes](https://danrnascimento.github.io/javascript30/Day10%20-%20Hold%20Shift%20to%20Check%20Multiple%20Checkboxes/)
 * [Day 11 - Custom HTML5 Video Player](https://danrnascimento.github.io/javascript30/Day11%20-%20Custom%20HTML5%20Video%20Player)
-* [Day 12 - Key Sequence Detection (KONAMI CODE)](https://danrnascimento.github.io/javascript30/Day12%20-%20Key%20Sequence%20Detection%20(KONAMI CODE))
+* [Day 12 - Key Sequence Detection (KONAMI CODE)](https://danrnascimento.github.io/javascript30/Day12%20-%20Key%20Sequence%20Detection%20(KONAMI%20CODE))
+* [Day 13 - Slide In On Scroll](https://danrnascimento.github.io/javascript30/Day13%20-%20Slide%20In%20on%20Scroll/)

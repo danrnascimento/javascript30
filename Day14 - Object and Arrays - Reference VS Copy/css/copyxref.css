@@ -1,0 +1,39 @@
+body {
+	background: url(https://media.giphy.com/media/xThuWhR3fzFZqoj5Hq/giphy.gif);
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+
+}
+
+.text-area {
+	display: flex;
+	align-items: center;
+	text-align: left;
+	width: 100vw;
+	height: 100vh;
+	padding-left: 22.5vw;
+}
+
+.text-area p {
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12vw;
+	color: #fff;
+}
+.text-area small {
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: .5vw;
+	color: #fff;
+}

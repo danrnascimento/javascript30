@@ -1,13 +1,12 @@
 html {
     box-sizing: border-box;
-    background: url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 *,
@@ -16,20 +15,31 @@ html {
     box-sizing: inherit;
 }
 
-svg {
-    fill: white;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 50%;
-    width: 200px;
-    margin-bottom: 50px;
+.bad-icon {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: fade 1s infinite linear, invert 1s infinite linear;
 }
 
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    animation: invert 1s infinite linear;
+}
 .wrapper {
     padding: 20px;
     max-width: 350px;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    animation-name: shadow;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
 }
 
 h2 {
@@ -78,4 +88,64 @@ h2 {
     padding: 10px;
     outline: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 50px 5px rgba(31,173,159,0.5);
+    }
+    25% {
+        box-shadow: 0 0 100px 15px rgba(205,49,49,0.5);
+    }
+    75% {
+        box-shadow: 0 0 100px 15px rgba(246,228,181,0.5);
+    }
+    100% {
+        box-shadow: 0 0 50px 5px rgba(31,173,159,0.5);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes invert {
+    0% {
+        filter: invert(0%);
+    }
+    50% {
+        filter: invert(100%);
+    }
+    100% {
+         filter: invert(0%);
+    }
+}
+
+@keyframes hue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: invert(180deg);
+    }
+    100% {
+         filter: invert(0deg);
+    }
 }

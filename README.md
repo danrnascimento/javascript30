@@ -14,3 +14,4 @@
 * [Day 11 - Custom HTML5 Video Player](https://danrnascimento.github.io/javascript30/Day11%20-%20Custom%20HTML5%20Video%20Player)
 * [Day 12 - Key Sequence Detection (KONAMI CODE)](https://danrnascimento.github.io/javascript30/Day12%20-%20Key%20Sequence%20Detection%20(KONAMI%20CODE))
 * [Day 13 - Slide In On Scroll](https://danrnascimento.github.io/javascript30/Day13%20-%20Slide%20In%20on%20Scroll/)
+* [Day 15 - LocalStorage and Event Delegation](https://danrnascimento.github.io/javascript30/Day15%20-%20LocalStorage%20and%20Event%20Delegation/)

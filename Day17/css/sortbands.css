@@ -1,0 +1,36 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+}
+
+img {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width:100vw;
+}
+
+ul li {
+    text-transform: uppercase;
+    font-family: Arial;
+    height: 90px;
+    width: 100%;
+    font-size: 30px;
+    color: #fff;
+    padding-left: 30%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

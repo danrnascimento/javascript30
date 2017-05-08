@@ -5,21 +5,78 @@ body{
     background-color: #111;
 }
 
-img {
-    position: fixed;
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+#player {
     width: 100vw;
     height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+    filter: blur(0);
+    opacity: 1;
+    transition: all .3s;
+}
+
+#player.open {
     filter: blur(5px);
+    opacity: .6;
+    transition: all .3s;
+}
+
+.thumbnail {
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    width: 300px;
+    height: 300px;
+    opacity: .2;
+    transition: all .5s;
+}
+
+.thumbnail:hover {
+    transition: all .5s;
+    box-shadow: 0 0 30px #000;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.thumbnail.open {
+    transition: all .5s;
+    box-shadow: 0 0 30px #000;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.ytp-chrome-bottom {
+    display: none!important;
+}
+.ytp-left-controls {
+    display: none !important;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width:100vw;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    width: 35vw;
+    transform: translateX(-25%);
+    opacity: 0;
+    transition: all .3s;
+}
+ul.open {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all .3s;
 }
 
 ul li {
@@ -27,10 +84,19 @@ ul li {
     font-family: Arial;
     height: 90px;
     width: 100%;
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
-    padding-left: 30%;
+    padding-left: 10%;
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: all .3s;
+}
+
+ul li:hover {
+    background: linear-gradient(to right, rgba(100, 100, 100, .9), rgba(100, 100, 100, .6), transparent, transparent); /* Standard syntax */
+    font-size: 28px;
+    font-style: italic;
+    padding-left: 12%;
+    transition: all .3s;
 }

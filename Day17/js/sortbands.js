@@ -1,6 +1,5 @@
 const bandHtml = document.querySelector('#bandlist');
 const thumbnail = document.querySelector('.thumbnail');
-const audio = document.querySelector('audio');
 var player;
 
 const bands = [
@@ -20,7 +19,6 @@ function onYouTubeIframeAPIReady() {
         width: '640',
         videoId: '',
         events: {
-            'onStateChange': onPlayerStateChange
         },
         playerVars: {
             'controls': 0,
@@ -28,6 +26,7 @@ function onYouTubeIframeAPIReady() {
             'autoplay': 1,
             'modestbranding': 1,
             'iv_load_policy': 3,
+            'rel': 0
         }
     });
 }
@@ -38,10 +37,6 @@ function strip(bandName) {
 
 function stripToSearch(bandName) {
     return bandName.replace(/ /g, '+').trim();
-}
-
-function onPlayerStateChange() {
-    console.log();
 }
 
 function ytVideo(e) {
@@ -87,4 +82,12 @@ bandHtml.addEventListener('mouseout', function(){
     bandHtml.classList.remove('open');
     thumbnail.classList.remove('open');
     document.querySelector('#player').classList.remove('open');
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.keyCode == 32 && player.getPlayerState() == 1) {
+        player.pauseVideo();
+    } else if(e.keyCode == 32 && player.getPlayerState() == 2){
+        player.playVideo();
+    }
 });

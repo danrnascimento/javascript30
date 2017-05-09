@@ -2,7 +2,7 @@ body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: #111;
+    background-color: #000;
 }
 
 ::-webkit-scrollbar {
@@ -35,13 +35,15 @@ body{
     position: fixed;
     right: 100px;
     top: 100px;
-    width: 300px;
-    height: 300px;
-    opacity: .2;
+    width: 150px;
+    height: 150px;
+    opacity: .1;
     transition: all .5s;
 }
 
 .thumbnail:hover {
+    width: 200px;
+    height: 200px;
     transition: all .5s;
     box-shadow: 0 0 30px #000;
     opacity: 1;
@@ -49,6 +51,8 @@ body{
 }
 
 .thumbnail.open {
+    width: 200px;
+    height: 200px;
     transition: all .5s;
     box-shadow: 0 0 30px #000;
     opacity: 1;
@@ -72,6 +76,7 @@ ul {
     transform: translateX(-25%);
     opacity: 0;
     transition: all .3s;
+    background: linear-gradient(to right, rgba(0, 0, 0, .6), transparent); /* Standard syntax */
 }
 ul.open {
     transform: translateX(0);
@@ -94,7 +99,7 @@ ul li {
 }
 
 ul li:hover {
-    background: linear-gradient(to right, rgba(100, 100, 100, .9), rgba(100, 100, 100, .6), transparent, transparent); /* Standard syntax */
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(50, 50, 50, .5), transparent, transparent); /* Standard syntax */
     font-size: 28px;
     font-style: italic;
     padding-left: 12%;

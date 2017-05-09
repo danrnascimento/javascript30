@@ -1,5 +1,6 @@
 const bandHtml = document.querySelector('#bandlist');
 const thumbnail = document.querySelector('.thumbnail');
+const audio = document.querySelector('audio');
 var player;
 
 const bands = [
@@ -39,6 +40,10 @@ function stripToSearch(bandName) {
     return bandName.replace(/ /g, '+').trim();
 }
 
+function onPlayerStateChange() {
+    console.log();
+}
+
 function ytVideo(e) {
     let bandNameSearch = stripToSearch(e.target.dataset.bandName)
     let id;
@@ -62,26 +67,22 @@ function ytVideo(e) {
         });
 }
 
-var done = false;
-
-function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-        done = true;
-    }
-}
-
 const sortedBands = bands.sort((a,b) => strip(a) > strip(b) ? 1 : -1);
 
 bandHtml.innerHTML = sortedBands.map(band => `<li data-band-name="${band}">${band}</li>`).join('');
+
 bandHtml.querySelectorAll('li').forEach(item => item.addEventListener('click', ytVideo));
+
 thumbnail.addEventListener('click', function(e){
     window.open(`https://www.youtube.com/watch?v=${e.target.alt}`);
 });
+
 bandHtml.addEventListener('mouseover', function(){
     bandHtml.classList.add('open');
     thumbnail.classList.add('open');
     document.querySelector('#player').classList.add('open');
 });
+
 bandHtml.addEventListener('mouseout', function(){
     bandHtml.classList.remove('open');
     thumbnail.classList.remove('open');

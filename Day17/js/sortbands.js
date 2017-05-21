@@ -13,7 +13,7 @@ const bands = [
 'Marjorie Estiano', 'Mart\'nália', 'Møme', 'Pitty', 'Seafret', 'Shakira', 'Simone e Simária',
 'Snoop Dogg', 'X Ambassadors', 'Yann Tiersen'];
 
-function onYouTubeIframeAPIReady() {
+window.onYouTubeIframeAPIReady =function() {
     player = new YT.Player('player', {
         height: '360',
         width: '640',

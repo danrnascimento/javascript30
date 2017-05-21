@@ -68,19 +68,19 @@ bandHtml.innerHTML = sortedBands.map(band => `<li data-band-name="${band}">${ban
 
 bandHtml.querySelectorAll('li').forEach(item => item.addEventListener('click', ytVideo));
 
-thumbnail.addEventListener('click', function(e){
-    window.open(`https://www.youtube.com/watch?v=${e.target.alt}`);
-});
+//thumbnail.addEventListener('click', function(e){
+//    window.open(`https://www.youtube.com/watch?v=${e.target.alt}`);
+//});
 
 bandHtml.addEventListener('mouseover', function(){
     bandHtml.classList.add('open');
-    thumbnail.classList.add('open');
+    //thumbnail.classList.add('open');
     document.querySelector('#player').classList.add('open');
 });
 
 bandHtml.addEventListener('mouseout', function(){
     bandHtml.classList.remove('open');
-    thumbnail.classList.remove('open');
+    //thumbnail.classList.remove('open');
     document.querySelector('#player').classList.remove('open');
 });
 

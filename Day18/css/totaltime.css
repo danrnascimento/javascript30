@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    color: #EAB64D;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3D262A;
+    height: 80px;
+    color: #EAB64D;
+    font-weight: bold;
+    transition: all .3s;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+ul li a {
+    color: #EAB64D;
+    text-decoration: none;
+    cursor: pointer;
+}
+ul li:hover a {
+
+}
+ul li:hover {
+    height: 100px;
+    transition: all .3s;
+}
+ul li:nth-child(even) {
+    background-color: #127C56;
+}
+
+.hide {
+    display: none !important;
+}
+
+.tempo-total {
+    text-align: left;
+    background-color: #EAB64D;
+    color: #ECF3F6;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15%;
+    font-size: 50px;
+}
+
+.time {
+    color: #127C56;
+    font-size: 50px;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3D262A;
+}
+
+.spin {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.8, 0.01, 0, 0.96);
+}
+
+.spin .spin-in {
+    height: 200px;
+    width: 200px;
+    background-color: #127C56;
+    border-radius: 100%;
+    opacity: 0.3;
+    position: absolute;
+    animation-name: spin-in;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    top: 0;
+    left: 0;
+}
+
+.spin .spin-out {
+    height: 200px;
+    width: 200px;
+    background-color: #EAB64D;
+    border-radius: 100%;
+    opacity: 0.3;
+    position: absolute;
+    animation-name: spin-out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    top: 0;
+    left: 0;
+}
+
+@keyframes spin-in {
+    0% {
+        transform: translateX(-50px) scale(.5);
+    }
+    50% {
+        transform: translateX(50px) scale(1);
+    }
+    100% {
+        transform: translateX(-50px) scale(.5);
+    }
+}
+
+@keyframes spin-out {
+    0% {
+        transform: translateX(50px) scale(.5);
+    }
+    50% {
+        transform: translateX(-50px) scale(1);
+    }
+    100% {
+        transform: translateX(50px) scale(.5);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

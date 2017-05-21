@@ -17,3 +17,4 @@
 * [Day 15 - LocalStorage and Event Delegation](https://danrnascimento.github.io/javascript30/Day15/)
 * [Day 16 - CSS Text Shadow Mouse Move Effect](https://danrnascimento.github.io/javascript30/Day16/)
 * [Day 17 - Sorting Band Names without articles](https://danrnascimento.github.io/javascript30/Day17/)
+* [Day 18 - Tally Strings Times with Reduce](https://danrnascimento.github.io/javascript30/Day18/)

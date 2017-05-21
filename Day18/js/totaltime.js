@@ -2,7 +2,7 @@ const movieList = document.querySelector('.movies');
 const load = document.querySelector('.load');
 const totalTag = document.querySelector('.time');
 const allTimes = [];
-const endpoint = "http://itunes.apple.com/search?term=Night+Shyamalan&media=movie&attribute=directorTerm&entity=movie";
+const endpoint = "https://itunes.apple.com/search?term=Night+Shyamalan&media=movie&attribute=directorTerm&entity=movie";
 let movies = [];
 jsonp(endpoint) //get data
 	.then(data => {

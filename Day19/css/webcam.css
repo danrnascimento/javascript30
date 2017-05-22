@@ -1,0 +1,36 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.photo {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.take-photo {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: 60px;
+    border: 4px solid #FFF;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.take-photo:hover,
+.take-photo:focus {
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    transition: all .3s;
+}

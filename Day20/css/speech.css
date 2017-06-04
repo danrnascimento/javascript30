@@ -1,0 +1,30 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.text {
+    font-family: 'Arial';
+    font-size: 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    max-width: 500px;
+}
+
+img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.2;
+}
+
+.hide {
+    display: none;
+}

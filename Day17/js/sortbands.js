@@ -11,7 +11,7 @@ const bands = [
 'Flume', 'Foster the people', 'The Freak Fandango Orchestra', 'Hozier', 'Imagine Dragons', 
 'Arctic Monkeys', 'Jain', 'Kaleo', 'The Lumineers', 'Luiza Possi', 'Maiara e Maraisa',
 'Marjorie Estiano', 'Mart\'nália', 'Møme', 'Pitty', 'Seafret', 'Shakira', 'Simone e Simária',
-'Snoop Dogg', 'X Ambassadors', 'Yann Tiersen', 'We Were Evergreen'];
+'Snoop Dogg', 'X Ambassadors', 'Yann Tiersen', 'We Were Evergreen', 'Alt-J'];
 
 window.onYouTubeIframeAPIReady =function() {
     player = new YT.Player('player', {

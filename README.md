@@ -20,3 +20,4 @@
 * [Day 18 - Tally Strings Times with Reduce](https://danrnascimento.github.io/javascript30/Day18/)
 * [Day 19 - Unreal Webcam Fun](https://danrnascimento.github.io/javascript30/Day19/)
 * [Day 20 - Native Speech Recognition](https://danrnascimento.github.io/javascript30/Day20/)
+* [Day 22 - Follow Along Links](https://danrnascimento.github.io/javascript30/Day22/)

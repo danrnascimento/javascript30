@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #0092CA;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav {
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+
+p {
+    padding: 10px 100px;
+}
+
+.highlight {
+    transition: all 0.2s cubic-bezier(1, 0.8, 0.2, 1.1);
+    border-bottom:2px solid white;
+    position: absolute;
+    top:0;
+    background:white;
+    left:0;
+    z-index: -1;
+    border-radius:20px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

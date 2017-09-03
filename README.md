@@ -22,3 +22,4 @@
 * [Day 20 - Native Speech Recognition](https://danrnascimento.github.io/javascript30/Day20/)
 * [Day 22 - Follow Along Links](https://danrnascimento.github.io/javascript30/Day22/)
 * [Day 23 - Speech Synthesis](https://danrnascimento.github.io/javascript30/Day23/)
+* [Day 24 - Sticky Nav](https://danrnascimento.github.io/javascript30/Day24/)

@@ -12,39 +12,41 @@ const fullWindow = player.querySelector('.player__full_window');
 
 /* Functions */
 
-function toggleIcon () {
+const toggleIcon = () => {
 	const icon = video.paused  ? '►' : '❚❚';
 	toggle.innerText = icon;
 }
-function togglePlay () {	
+const togglePlay = () => {	
 	const method = video.paused ? 'play' : 'pause';
 	video[method]();
 }
 
-function skip () {
-	const skip = parseFloat(this.dataset.skip);
+const skip = (event) => {
+	if(!event.currentTarget) return;
+	const skip = parseFloat(event.currentTarget.dataset.skip);
 	video.currentTime += skip;
 }
 
-function handleProgress () {
+const handleProgress = () => {
 	const percentage = (video.currentTime / video.duration) * 100;
 	progress_bar.style.flexBasis = `${percentage}%`;
 }
 
-function handleRangeUpdate () {
-	const nameRange = this.name;
-	const valueRange = this.value;
-	if (downClick){
+const handleRangeUpdate = (event) => {
+	if(!event.currentTarget) return;
+	const nameRange = event.currentTarget.name;
+	const valueRange = event.currentTarget.value;
+	if (downClick) {
 		video[nameRange] = parseFloat(valueRange);
-	}	
+	}
 }
 
-function scrub (e) {
-	const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+const scrub = (event) => {
+	const scrubTime = (event.offsetX / progress.offsetWidth) * video.duration;
 	video.currentTime = scrubTime;
 }
 
-function toggleFullWindow () {
+const toggleFullWindow = () => {
 	const val = isFull ? '100%' : 'auto';
 	player.style.width = `${val}`;
 	player.style.height = `${val}`;
@@ -52,11 +54,12 @@ function toggleFullWindow () {
 
 /* Event listeners */
 
-video.addEventListener('click', function () {
+video.addEventListener('click', () => {
 	togglePlay();
 	toggleIcon();
 });
-toggle.addEventListener('click', function () {
+
+toggle.addEventListener('click', () => {
 	togglePlay();
 	toggleIcon();
 });
@@ -65,7 +68,7 @@ skipButtons.forEach(button => button.addEventListener('click', skip));
 video.addEventListener('timeupdate', handleProgress);
 
 let isFull = false;
-fullWindow.addEventListener('click', function () {
+fullWindow.addEventListener('click', () => {
 	isFull = !isFull;
 	toggleFullWindow();
 });
@@ -75,9 +78,9 @@ ranges.forEach(range => range.addEventListener('mousedown', () => downClick = tr
 
 ranges.forEach(range => range.addEventListener('mouseup', () => downClick = false));
 
-ranges.forEach(range => range.addEventListener('click', function(){
+ranges.forEach(range => range.addEventListener('click', (event) => {
 	downClick = true;
-	handleRangeUpdate();
+	handleRangeUpdate(event);
 }));
 
 ranges.forEach(range => range.addEventListener('mousemove',handleRangeUpdate));

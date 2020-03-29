@@ -2,17 +2,17 @@ console.log("Gifs by Birthday Bot (http://giphy.com/birthday) ");
 
 const panels = document.querySelectorAll('.panel');
 
-function addOpen () {
-	this.classList.add('open');
+const addOpen = (event) => {
+	event.currentTarget.classList.add('open');
 }	
 
-function removeOpen () {
-	this.classList.remove('open');
+const removeOpen = (event) => {
+	event.currentTarget.classList.remove('open');
 }
 
-function toggleActive (e) {
-	if(e.propertyName.includes('flex')){
-		this.classList.toggle('open-active');
+const toggleActive = (event) => {
+	if(event.propertyName.includes('flex')){
+		event.currentTarget.classList.toggle('open-active');
 	}
 }
 

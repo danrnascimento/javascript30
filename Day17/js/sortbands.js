@@ -13,7 +13,7 @@ const bands = [
 'Marjorie Estiano', 'Mart\'nália', 'Møme', 'Pitty', 'Seafret', 'Shakira', 'Simone e Simária',
 'Snoop Dogg', 'X Ambassadors', 'Yann Tiersen', 'We Were Evergreen', 'Alt-J'];
 
-window.onYouTubeIframeAPIReady =function() {
+window.onYouTubeIframeAPIReady = () => {
     player = new YT.Player('player', {
         height: '360',
         width: '640',
@@ -31,15 +31,15 @@ window.onYouTubeIframeAPIReady =function() {
     });
 }
 
-function strip(bandName) {
+const strip = (bandName) => {
     return bandName.replace(/^(a |an |the )/i, '').trim();
 }
 
-function stripToSearch(bandName) {
+const stripToSearch = (bandName) => {
     return bandName.replace(/ /g, '+').trim();
 }
 
-function ytVideo(e) {
+const ytVideo = (e) => {
     let bandNameSearch = stripToSearch(e.target.dataset.bandName)
     let id;
     let api = {

@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 const strip = document.querySelector('.strip');
 const snap = document.querySelector('.snap');
 
-function getVideo() {
+const getVideo = () => {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(localMediaStream => {
       console.log(localMediaStream);
@@ -16,7 +16,7 @@ function getVideo() {
     });
 }
 
-function paintToCanvas() {
+const paintToCanvas = () => {
   const width = video.videoWidth;
   const height = video.videoHeight;
   canvas.width = width;
@@ -33,7 +33,7 @@ function paintToCanvas() {
   }, 16);
 }
 
-function takePhoto() {
+const takePhoto = () => {
   // played the sound
   snap.currentTime = 0;
   snap.play();
@@ -47,7 +47,7 @@ function takePhoto() {
   link.remove();
 }
 
-function dreamEffect(pixels) {
+const dreamEffect = (pixels) => {
   for(let i = 0; i < pixels.data.length; i+=4) {
     pixels.data[i + 0] = pixels.data[i + 0] - 50; // RED
     pixels.data[i + 1] = pixels.data[i + 1] - 50; // GREEN
@@ -56,7 +56,7 @@ function dreamEffect(pixels) {
   return pixels;
 }
 
-function rgbSplit(pixels) {
+const rgbSplit = (pixels) => {
   for(let i = 0; i < pixels.data.length; i+=4) {
     pixels.data[i - 10] = pixels.data[i + 0]; // RED
     pixels.data[i + 550] = pixels.data[i + 1]; // GREEN
@@ -65,7 +65,7 @@ function rgbSplit(pixels) {
   return pixels;
 }
 
-function greenScreen(pixels) {
+const greenScreen = (pixels) => {
   const levels = {};
 
   document.querySelectorAll('.rgb input').forEach((input) => {

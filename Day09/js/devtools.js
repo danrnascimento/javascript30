@@ -1,6 +1,6 @@
 const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 const p = document.querySelector('p');
-function makeGreen() {
+const makeGreen = () => {
   p.style.color = '#BADA55';
 }
 

@@ -1,5 +1,5 @@
 
-function debounce(func, wait = 20, immediate = true) {
+const debounce = (func, wait = 20, immediate = true) => {
 	var timeout;
 	return function() {
 		var context = this, args = arguments;
@@ -16,7 +16,7 @@ function debounce(func, wait = 20, immediate = true) {
 
 const sliderImages = document.querySelectorAll('.slide-in');
 
-function checkSlide(e) {
+const checkSlide = (e) => {
 	sliderImages.forEach(sliderImage => {
         // half way through the image
         const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
@@ -31,4 +31,5 @@ function checkSlide(e) {
         }
     });
 }
+
 window.addEventListener('scroll', debounce(checkSlide));

@@ -1,22 +1,21 @@
 const keys = document.querySelectorAll('.key');
 
-function onPlay(e) {
-	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //select the audio tag by key code
-	const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //select the div tag by key code
-	if(!audio) return; //stop the function from running all together
+const onPlay = (event) => {
+	const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+	const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+	if(!audio) return;
 	
 	key.classList.add('playing');
-	audio.currentTime = 0;//rewind to the start
-	audio.play(); //play audio
+	audio.currentTime = 0;
+	audio.play();
 }
 
-function removeTransition(e) {
-	if (e.propertyName !== 'transform' ) return; //skip it if it's not a transform
+const removeTransition = (event) => {
+	if (event.propertyName !== 'transform' ) return;
 	this.classList.remove('playing');
 }
 
-// fix an issue
-function onUp(e) {
+const onUp = () => {
 	keys.forEach(key => key.classList.remove('playing'));
 }
 

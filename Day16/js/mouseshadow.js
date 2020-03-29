@@ -2,13 +2,13 @@ const body = document.querySelector('body');
 const title = document.querySelector('h1');
 const walk = 100;
 
-function shadow(e) {
+const shadow = (event) => {
     const {offsetWidth: width, offsetHeight: height} = title;
-    let {offsetX: x, offsetY: y} = e;
+    let {offsetX: x, offsetY: y} = event;
 
-    if(this !== e.target) {
-        x = x + e.target.offsetLeft;
-        y = y + e.target.offsetTop; 
+    if(event.currentTarget !== event.target) {
+        x = x + event.target.offsetLeft;
+        y = y + event.target.offsetTop; 
     }
 
     const xWalk = Math.round((x / width  * walk) - (walk / 1.5));

@@ -1,4 +1,4 @@
-function timeClock (e) {
+const timeClock = (e) => {
 	
 	const now = new Date();
 

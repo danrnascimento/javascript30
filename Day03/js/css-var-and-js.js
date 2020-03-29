@@ -2,7 +2,7 @@
 
 const inputs = document.querySelectorAll('.controls input');
 
-function handleUpdate () {
+const handleUpdate = () => {
 	const suffix = this.dataset.suffix || '';
 	document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
 }

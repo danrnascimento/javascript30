@@ -1,7 +1,7 @@
 const speed = document.querySelector('.speed');
 const compass = document.querySelector('svg');
 
-const compassFunction = function (data) {
+const compassFunction = (data) => {
     speed.textContent = data.coords.speed;
     compass.style.transform = `rotate(${data.coords.heading}deg)`;
 
@@ -11,7 +11,8 @@ const compassFunction = function (data) {
 }
 
 if (navigator.geolocation) {
-    navigator.geolocation.watchPosition((data) => compassFunction(data), (err) => {
-        console.log(err);
-    });
+    navigator.geolocation.watchPosition(
+        (data) => compassFunction(data),
+        (err) => { console.log(err) }
+    );
 }

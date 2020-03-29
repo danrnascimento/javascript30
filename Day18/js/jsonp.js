@@ -1,4 +1,4 @@
-var jsonp = (function (global, body) {
+const jsonp = ((global, body) => {
     'use strict';
 
     // Uses native Promise. Older browsers + IE11 and Safari 7 (!) need polyfill.
@@ -6,8 +6,15 @@ var jsonp = (function (global, body) {
         throw 'Promise not available. Use a polyfill! http://promisesaplus.com/implementations';
     }
 
-    return function (url) {
-        return new Promise(function (resolve, reject) {
+    const createScript = (url, callbackName) => {
+        var script = document.createElement('script');
+        script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+
+        return script;
+    }
+
+    return (url) => {
+        return new Promise((resolve, reject) => {
             var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random()),
                 script = createScript(url, callbackName);
 
@@ -33,11 +40,4 @@ var jsonp = (function (global, body) {
         });
     };
 
-    function createScript(url, callbackName) {
-        var script = document.createElement('script');
-        script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
-
-        return script;
-    }
-
-}(this, document.body));
+})(this, document.body);

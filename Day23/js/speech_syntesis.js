@@ -1,33 +1,33 @@
-const msg = new SpeechSynthesisUtterance();
 let voices = [];
+const msg = new SpeechSynthesisUtterance();
 const voicesDropdown = document.querySelector('[name="voice"]');
 const options = document.querySelectorAll('[type="range"], [name="text"]');
 const speakButton = document.querySelector('#speak');
 const stopButton = document.querySelector('#stop');
 msg.text = document.querySelector('[name="text"]').value;
 
-function populateVoices() {
-    voices = this.getVoices();
+const populateVoices = (event) => {
+    voices = event.currentTarget.getVoices();
     const voicesOptions = voices
         .map(voice => `<option value="${voice.name}">${voice.name}(${voice.lang})</option>`)
         .join('');
     voicesDropdown.innerHTML = voicesOptions;
 }
 
-function setVoice() {
-    msg.voice = voices.find(voice => voice.name === this.value);
+const setVoice = (event) => {
+    msg.voice = voices.find(voice => voice.name === event.currentTarget.value);
     toggle();
 }
 
-function toggle(startOver = true) {
+const toggle = (startOver = true) => {
     speechSynthesis.cancel();
     if(startOver) {
         speechSynthesis.speak(msg);
     }
 }
 
-function setOption() {
-    msg[this.name] = this.value;
+const setOption = () => {
+    msg[event.currentTarget.name] = event.currentTarget.value;
     toggle();
 }
 

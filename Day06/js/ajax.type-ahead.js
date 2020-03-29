@@ -7,50 +7,35 @@ fetch(endpoint) //get data
 	.then(blob => blob.json())
 	.then(data => cities.push(...data));
 
-function findMacthes(wordToMatch, cities){ //filter the cities in array
-
+const findMacthes = (wordToMatch, cities) => {
 	return cities.filter(place => {
 		const regex = new RegExp(wordToMatch, 'gi');
 		return place.city.match(regex) || place.state.match(regex);
 	});
 }
 
-function numberWithCommas(x) { //use comma in the numbers
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+const numberWithCommas = (value) => {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
-function displayMatches() {
-	const matchArray = findMacthes(this.value, cities);
-	const html = matchArray.map(place => {
-		const regex = new RegExp(this.value, 'gi'); //create new regex to highlight the word
-		const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);  //apply highlight in city name
-		const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`); //apply highlight in state name
+const mapPlaceToItem = (value, place) => {
+	const regex = new RegExp(value, 'gi');
+	const cityName = place.city.replace(regex, `<span class="hl">${value}</span>`);
+	const stateName = place.state.replace(regex, `<span class="hl">${value}</span>`);
 
-		//return this html for each city
-		return `
-			<li data-lat="${place.latitude}" data-lng="${place.longitude}">
+	return `
+		<li data-lat="${place.latitude}" data-lng="${place.longitude}">
 			<span class="name"> ${cityName}, ${stateName}</span>
 			<span class="population">${numberWithCommas(place.population)}</span>
-			</li>
-		`;
-
-	}).join('');
-	suggestions.innerHTML = html; //include the li in the page
-
-	const locals = document.querySelectorAll('li'); //get all Li with the locations
-	function updateMarker(){ //function for update the map
-		map.setCenter({ lat: parseFloat(this.dataset.lat), lng: parseFloat(this.dataset.lng) }); //update the map
-	}
-	locals.forEach(local => local.addEventListener('click', updateMarker)); //event to execute the function for update the map
-}
-//init google maps API
-function initMap() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: -34.397, lng: 150.644},
-		scrollwheel: false,
-		zoom: 10
-	});
+		</li>
+	`;
 }
 
+const displayMatches = (event) => {
+	const value = event.target.value;
+	const matchArray = findMacthes(value, cities);
+	const html = matchArray.map(place => mapPlaceToItem(value, place)).join('');
+	suggestions.innerHTML = html;
+}
 
 searchInput.addEventListener('keyup', displayMatches);

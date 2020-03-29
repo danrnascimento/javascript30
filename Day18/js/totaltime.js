@@ -4,15 +4,8 @@ const totalTag = document.querySelector('.time');
 const allTimes = [];
 const endpoint = "https://itunes.apple.com/search?term=Night+Shyamalan&media=movie&attribute=directorTerm&entity=movie";
 let movies = [];
-jsonp(endpoint) //get data
-	.then(data => {
-        movies.push(...data.results);
-        console.log(data);
-        setMovies();
-        sumTime();
-    });
 
-function setMovies() {
+const setMovies = () => {
     let html = movies.map(movie => {
         const title = movie.trackName;
         const time = movie.trackTimeMillis;
@@ -24,11 +17,12 @@ function setMovies() {
 			    <a href="${url}" target="_blank">${title}</a>
 			</li>`;
     }).join('');
+
     movieList.innerHTML = html;
     load.classList.add('hide');
 }
 
-function sumTime() {
+const sumTime = () => {
     allTimes.push(...Array.from(document.querySelectorAll('[data-time]')));
     allTimes.forEach(item => {
         item.addEventListener('mouseover', function (e) {
@@ -38,6 +32,7 @@ function sumTime() {
             this.style.backgroundImage = `url("")`;
         });
     });
+
     const seconds = allTimes
         .map(node => node.dataset.time).map(parseFloat)
         .map(timeNode => timeNode / 1000)
@@ -52,5 +47,13 @@ function sumTime() {
         const timeString = `${hours}:${minutes}:${Math.round(secondsLeft)}`;
         totalTag.innerHTML = timeString;
 }
+
+jsonp(endpoint) // get data
+	.then(data => {
+        movies.push(...data.results);
+        console.log(data);
+        setMovies();
+        sumTime();
+    });
 
 

@@ -3,10 +3,10 @@ const addItems = document.querySelector('.add-items');
 const itemsList = document.querySelector('.plates');
 const items = JSON.parse(localStorage.getItem('items')) || [];
 
-function addItem(e) {
+const addItem = (e) => {
     e.preventDefault();
     
-    const text = this.querySelector('[name=item]').value;
+    const text = e.currentTarget.querySelector('[name=item]').value;
     const item = {
         text,
         done: false
@@ -15,10 +15,10 @@ function addItem(e) {
     items.push(item);
     populateList(items, itemsList);
     localStorage.setItem('items', JSON.stringify(items));
-    this.reset();
+    e.currentTarget.reset();
 }
 
-function populateList(plates = [], plateList) {
+const populateList = (plateList, plates = []) => {
     plateList.innerHTML = plates.map((plate, i) => {
         return `
             <li>
@@ -29,7 +29,7 @@ function populateList(plates = [], plateList) {
     }).join('');
 }
 
-function toggleDone(e) {
+const toggleDone = (e) => {
     if (!e.target.matches('input')) return;
     const el = e.target;
     const index = el.dataset.index;
@@ -39,6 +39,6 @@ function toggleDone(e) {
     
 }
 
-populateList(items, itemsList);
+populateList(itemsList, items);
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);

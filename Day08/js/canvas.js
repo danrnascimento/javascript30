@@ -15,7 +15,7 @@ let hue = 0;
 let direction = true;
 
 
-function draw (e) {
+const draw = (event) => {
 	
 	if(!isDrawing) return false;
 
@@ -24,9 +24,9 @@ function draw (e) {
 
 	ctx.moveTo(lastX, lastY);
 
-	ctx.lineTo(e.offsetX, e.offsetY);
+	ctx.lineTo(event.offsetX, event.offsetY);
 	ctx.stroke();
-	[lastX, lastY] = [e.offsetX, e.offsetY];
+	[lastX, lastY] = [event.offsetX, event.offsetY];
 
 
 	hue++;

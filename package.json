@@ -16,5 +16,13 @@
     "url": "https://github.com/danrnascimento/javascript30/issues"
   },
   "homepage": "https://github.com/danrnascimento/javascript30#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^4.0.3",
+    "terser-webpack-plugin": "^2.3.5",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
 }

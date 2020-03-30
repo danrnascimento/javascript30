@@ -1,0 +1,11 @@
+html {
+	font-size: 10px;
+	background: linear-gradient(145deg, #E1A357, #E4DCAC);
+	cursor: none;
+}
+
+body,html {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}

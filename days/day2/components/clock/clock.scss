@@ -1,0 +1,20 @@
+.clock {
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	border:  20px solid white;
+	border-radius: 50%;
+	margin: 0 auto;
+	padding: 2rem;
+
+	&_face {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transform:  translateY(-3px);
+
+		&_hour-hand {
+			background-color: darkred;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 import React, { FC, useState, useRef, useEffect } from 'react';
-import './key.scss';
 import useKeyBinding from '../../hooks/use-key-binding';
+import './key.scss';
 
 const Audios: { [key: number]: string } = {
     65: "clap.wav",

@@ -39,7 +39,8 @@ let config = ({ production, day }) => {
                                     localIdentName: production ? '[hash:base64]' : '[local]',
                                 },
                                 sourceMap: !production,
-                                localsConvention: 'asIs'
+                                localsConvention: 'camelCaseOnly',
+                                esModule: true
                             },
                         },
                         'sass-loader'

@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import ClockHand from './components/clock-hand/clock-hand';
-import './index.scss';
 import Clock from './components/clock/clock';
+import './index.scss';
 
-
-const Day02 = () => {
-
-    return (
-        <Clock />
-    );
-}
+const Day02 = () => (<Clock />);
 
 export default Day02;
 

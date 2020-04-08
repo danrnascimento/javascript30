@@ -27,6 +27,7 @@
         "@types/react-dom": "^16.9.5",
         "copy-webpack-plugin": "^5.1.1",
         "css-loader": "^3.4.2",
+        "css-module-types": "^0.2.2",
         "file-loader": "^6.0.0",
         "html-webpack-plugin": "^4.0.3",
         "mini-css-extract-plugin": "^0.9.0",

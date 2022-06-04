@@ -1,26 +1,27 @@
-const timeClock = (e) => {
-	
-	const now = new Date();
+const SECOND_HAND = ".second-hand";
+const MIN_HAND = ".min-hand";
+const HOUR_HAND = ".hour-hand";
 
-	const seconds = now.getSeconds();
-	const minutes = now.getMinutes();
-	const hours = now.getHours();
+const getDegree = (value) => value * 360 + 90;
 
-	const secondHand = document.querySelector('.second-hand');
-	const minuteHand = document.querySelector('.min-hand');
-	const hourHand = document.querySelector('.hour-hand');
-	
+const getTimeDegreeBySelector = (date) => (selector) =>
+  ({
+    [SECOND_HAND]: getDegree(date.getSeconds() / 60),
+    [MIN_HAND]: getDegree(date.getMinutes() / 60),
+    [HOUR_HAND]: getDegree(date.getHours() / 12),
+  }[selector]);
 
-	const secondDegree = ((seconds / 60) * 360) + 90;
-	const minuteDegree = ((minutes / 60) * 360) + 90;
-	const hourDegree = ((hours / 12) * 360) + 90;
+const makeElementDegUpdater = (date) => (selector) => {
+  const degree = getTimeDegreeBySelector(date)(selector);
+  const element = document.querySelector(selector);
+  element.style.setProperty("--rotateDeg", `${degree}deg`);
+};
 
-
-	secondHand.style.transform = `rotate(${secondDegree}deg)`;
-	minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
-	hourHand.style.transform = `rotate(${hourDegree}deg)`;
-
-
-}
+const timeClock = () => {
+  const now = new Date();
+  const update = makeElementDegUpdater(now);
+  const hands = [SECOND_HAND, MIN_HAND, HOUR_HAND];
+  hands.forEach(update);
+};
 
 setInterval(timeClock, 1000);

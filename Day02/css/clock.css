@@ -1,56 +1,90 @@
 html {
-	background-color: sienna;
-	font-family: 'Helvetica';
-	text-align: center;
-	font-size: 10px;
+  /* background-color: sienna; */
+  background-image: url("https://thiscatdoesnotexist.com/");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Helvetica";
+  text-align: center;
+  font-size: 10px;
 }
 
 body {
-	font-size: 2rem;
-	display: flex;
-	flex:  1;
-	min-height: 100vh;
-	align-items: center;
-	margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  margin: 0;
 }
 
 body::after {
-	opacity: 0.3;
-	content: "";
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: -1;   
+  opacity: 0.3;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
-
 .clock {
-	position: relative;
-	width: 30rem;
-	height: 30rem;
-	border:  20px solid white;
-	border-radius: 50%;
-	margin: 0 auto;
-	padding: 2rem;
+  position: relative;
+  width: 30em;
+  height: 30em;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  backdrop-filter: blur(35px);
 }
 
 .clock-face {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	transform:  translateY(-3px);
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.clock-face::after {
+  display: flex;
+  content: "●";
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #fff;
+  font-size: 42px;
+  text-shadow: 0 0 5px rgb(0 0 0 / 40%);
 }
 
 .hand {
-	width: 50%;
-	height: 5px;
-	background: #000;
-	position: absolute;
-	top: 50%;
-	transform: rotate(90deg);
-	transform-origin: 100%;
-	transition: all 0.05s;
-	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  --rotateDeg: 90deg;
+  width: 50%;
+  height: 5px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  transform: rotate(var(--rotateDeg));
+  transform-origin: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -4px 2px 5px rgb(0 0 0 / 40%);
+}
+
+.second-hand {
+  height: 3px;
+  background: #5e0b15;
+}
+
+.hour-hand {
+  height: 6px;
+  width: 50%;
+}
+
+.min-hand {
+  background: #3d405b;
 }

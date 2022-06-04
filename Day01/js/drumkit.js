@@ -1,26 +1,14 @@
-const keys = document.querySelectorAll('.key');
+import { audioManager } from "./audio.js";
 
-const onPlay = (event) => {
-	const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-	const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
-	if(!audio) return;
-	
-	key.classList.add('playing');
-	audio.currentTime = 0;
-	audio.play();
+const audio = audioManager();
+
+const keys = document.querySelectorAll(".key");
+
+function removeTransition(event) {
+  if (event.propertyName !== "transform") return;
+  this.classList.remove("playing");
 }
 
-const removeTransition = (event) => {
-	if (event.propertyName !== 'transform' ) return;
-	this.classList.remove('playing');
-}
-
-const onUp = () => {
-	keys.forEach(key => key.classList.remove('playing'));
-}
-
-
-keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', onPlay);
-window.addEventListener('keyup', onUp);
-window.addEventListener('touchstart', onPlay);
+keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
+window.addEventListener("keydown", ({ keyCode }) => audio.play(keyCode));
+window.addEventListener("keyup", ({ keyCode }) => audio.stop(keyCode));
